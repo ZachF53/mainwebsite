@@ -6,8 +6,6 @@
   "scripts": {
     "start": "node index.js"
   },
-  "author": "Zachery Long",
-  "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
@@ -16,18 +14,9 @@
     "pug": "^2.0.3"
   },
   "repository": {
-<<<<<<< HEAD
     "type": "git",
     "url": "git@github.com:ZachF53/mainwebsite.git"
-=======
-  "type": "git",
-  "url": "git@github.com:ZachF53/mainwebsite.git"
-<<<<<<< HEAD
   },
-  "scripts": {
-    "start": "node index.js"
->>>>>>> 43547c4ecf48c80ebf99b1a32a59db9b65bc522c
-=======
->>>>>>> e7b34e9d4b4647dd00b1cd4171ad1d85cf30db84
-  }
+  "author": "Zachery Long",
+  "license": "ISC",
 }
