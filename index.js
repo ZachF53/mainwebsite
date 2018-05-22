@@ -22,6 +22,9 @@ app.get('/', (req, res) => {
 });
 
 // Add Route
+app.get('/index', (req, res) => {
+  res.render('index');
+});
 app.get('/port', (req, res) => {
   res.render('port');
 });
