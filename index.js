@@ -5,6 +5,7 @@ const nodemailer = require('nodemailer');
 
 const app = express();
 
+app.set('port', (process.env.PORT || 5000))
 // Load View
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -83,4 +84,6 @@ app.post('/send', (req, res) => {
 });
 
 
-app.listen(3000, () => console.log('Server started...'));
+app.listen(app.get('port'), function() {
+  console.log("Node app is running at localhost:" + app.get('port'))
+})
