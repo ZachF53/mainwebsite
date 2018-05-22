@@ -16,7 +16,7 @@
     "pug": "^2.0.3"
   },
   "repository": {
-  "type": "git",
-  "url": "git@github.com:ZachF53/mainwebsite.git"
+    "type": "git",
+    "url": "git@github.com:ZachF53/mainwebsite.git"
   }
 }
