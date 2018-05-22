@@ -16,7 +16,15 @@
     "pug": "^2.0.3"
   },
   "repository": {
+<<<<<<< HEAD
     "type": "git",
     "url": "git@github.com:ZachF53/mainwebsite.git"
+=======
+  "type": "git",
+  "url": "git@github.com:ZachF53/mainwebsite.git"
+  },
+  "scripts": {
+    "start": "node index.js"
+>>>>>>> 43547c4ecf48c80ebf99b1a32a59db9b65bc522c
   }
 }
