@@ -18,5 +18,8 @@
   "repository": {
   "type": "git",
   "url": "git@github.com:ZachF53/mainwebsite.git"
+  },
+  "scripts": {
+    "start": "node index.js"
   }
 }
