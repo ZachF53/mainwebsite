@@ -4,6 +4,7 @@
   "description": "Main Website",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js"
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Zachery Long",
@@ -18,8 +19,5 @@
   "repository": {
   "type": "git",
   "url": "git@github.com:ZachF53/mainwebsite.git"
-  },
-  "scripts": {
-    "start": "node index.js"
   }
 }
