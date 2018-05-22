@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Contact Route
-app.get('/index', (req, res) => {
+app.get('/', (req, res) => {
   res.render('index');
 });
 
