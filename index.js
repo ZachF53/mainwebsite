@@ -5,6 +5,7 @@ const nodemailer = require('nodemailer');
 
 const app = express();
 
+app.set('port', (process.env.PORT || 80))
 // Load View
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -17,11 +18,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Contact Route
-app.get('/index', (req, res) => {
+app.get('/', (req, res) => {
   res.render('index');
 });
 
 // Add Route
+app.get('/index', (req, res) => {
+  res.render('index');
+});
 app.get('/port', (req, res) => {
   res.render('port');
 });
@@ -80,4 +84,6 @@ app.post('/send', (req, res) => {
 });
 
 
-app.listen(3000, () => console.log('Server started...'));
+app.listen(app.get('port'), function() {
+  console.log("Node app is running at localhost:" + app.get('port'))
+})
