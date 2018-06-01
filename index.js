@@ -5,6 +5,8 @@ const nodemailer = require('nodemailer');
 
 const app = express();
 
+app.set('port', (process.env.PORT || 80))
+
 // Load View
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -29,7 +31,7 @@ app.get('/port', (req, res) => {
   res.render('port');
 });
 app.get('/service', (req, res) => {
-  res.render('service1');
+  res.render('service');
 });
 app.get('/contact', (req, res) => {
   res.render('contact');
@@ -49,10 +51,8 @@ app.post('/send', (req, res) => {
     <p>You have a new contact request</p>
     <h3>Contact Details</h3>
     <ul>
-      <li>Name: ${req.body.name}</li>
-      <li>Company: ${req.body.company}</li>
+      <li>Name: ${req.body.firstname} ${req.body.lastname}</li>
       <li>Email: ${req.body.email}</li>
-      <li>Phone: ${req.body.phone}</li>
     </ul>
     <h3>Message</h3>
     <p>${req.body.message}</p>
@@ -60,12 +60,12 @@ app.post('/send', (req, res) => {
 
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
-    host: 'imap-mail.outlook.com',
+    host: 'smtp.gmail.com',
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-        user: 'zachery@firstresponsewebdesign.com', // generated ethereal user
-        pass: '56nTk46!'  // generated ethereal password
+        user: 'frwebdesigns1@gmail.com', // generated ethereal user
+        pass: 'Password@53'  // generated ethereal password
     },
     tls:{
       rejectUnauthorized:false
@@ -74,9 +74,9 @@ app.post('/send', (req, res) => {
 
   // setup email data with unicode symbols
   let mailOptions = {
-      from: '"Nodemailer Contact" <zachery@firstresponsewebdesign.com>', // sender address
-      to: 'football45353@gmail.com', // list of receivers
-      subject: 'Node Contact Request', // Subject line
+      from: '"Website Contact" <frwebdesigns1@gmail.com>', // sender address
+      to: 'football45353@gmail.com, frwebdesigns1@gmail.com', // list of receivers
+      subject: 'Website Contact Request', // Subject line
       text: 'Contact Request', // plain text body
       html: output // html body
   };
@@ -94,4 +94,6 @@ app.post('/send', (req, res) => {
 });
 
 
-app.listen(3000, () => console.log('Server started...'));
+app.listen(app.get('port'), function() {
+ console.log("Node app is running at localhost:" + app.get('port'))
+})
