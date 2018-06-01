@@ -146,9 +146,6 @@ ul{
   list-style-type: none;
   padding-left: .5rem;
 }
-.card{
-  margin-left: 40px;
-}
 
 /*User Page*/
 .user-head{
@@ -198,7 +195,6 @@ ul{
   .carousel-inner img {
       height:50vh;
   }
-
   .carousel-caption{
     top: 50%;
   }
@@ -216,6 +212,12 @@ ul{
   .carousel-caption h4{
     font-size: 90%;
     font-weight: 200;
+  }
+  .card{
+    margin-left: 40px;
+  }
+  form{
+    margin-left: 30px;
   }
   .display-4{
     font-size: 160%
