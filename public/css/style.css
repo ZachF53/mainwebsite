@@ -146,6 +146,9 @@ ul{
   list-style-type: none;
   padding-left: .5rem;
 }
+.card{
+  margin-left: 40px;
+}
 
 /*User Page*/
 .user-head{
