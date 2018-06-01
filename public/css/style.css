@@ -7,6 +7,14 @@
   color: #C95200;
 }
 
+.text-white{
+  color: white;
+}
+
+.dropdown-item:hover{
+  color: black;
+}
+
 .text_mine2{
   color: #D5D6DC;
   font-size: 2px;
@@ -30,11 +38,6 @@
   font-weight: 350;
 }
 
-.center{
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
 body{
   background-color: #CECECE;
@@ -42,7 +45,7 @@ body{
 /*Carousel*/
 .carousel-inner img {
     width:100%;
-    height:65vh;
+    height:90vh;
 }
 
 .carousel-caption{
@@ -136,9 +139,7 @@ footer{
   background-color: black;
   color: white;
   height: 50px;
-  padding-top: 15px;
 }
-
 
 /*services*/
 ul{
@@ -146,21 +147,25 @@ ul{
   padding-left: .5rem;
 }
 
+/*User Page*/
+.user-head{
+  margin-top: 20px;
+  border: 2px solid black;
+}
+.user-profile{
+  margin-top: 20px;
+}
+
+
 /* Media Queries */
 @media (max-width:992px){
   .social a{
     font-size: 3.5em;
     padding:2rem;
   }
-  form{
-    margin-top: 150px;
-  }
 }
 
 @media (max-width:768px){
-  .carousel-inner img {
-      height:75vh;
-  }
   .carousel-caption{
     top: 50%;
     height:200px
@@ -184,31 +189,13 @@ ul{
     font-size: 2.5em;
     padding:1.4rem;
   }
-  .form-group{
-    margin-bottom: 10;
-  }
-  .card{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  .container-fluid{
-    width: 100%;
-  }
-  footer{
-    font-size: 20px;
-  }
-  form{
-    margin-top: 0px;
-    margin-bottom: 100px;
-    margin-left: 20px;
-  }
 }
 
 @media (max-width:576px){
   .carousel-inner img {
-      height:65vh;
+      height:50vh;
   }
+
   .carousel-caption{
     top: 50%;
   }
@@ -227,37 +214,11 @@ ul{
     font-size: 90%;
     font-weight: 200;
   }
-  .card-header{
-    width: 100%;
-  }
-  .card-footer{
-    width: 100%;
-  }
   .display-4{
     font-size: 160%
   }
   .social a{
     font-size: 2em;
     padding:.7rem;
-  }
-  .card{
-    justify-content: center;
-    align-items: center;
-    margin-left: 20px;
-    margin-right: -10px;
-  }
-  .port h1{
-    font-size: 15px;
-  }
-  .small{
-    display: none;
-  }
-  footer{
-    font-size: 10px;
-  }
-  form{
-    margin-top: 0px;
-    margin-bottom: 10px;
-    margin-left: 20px;
   }
 }

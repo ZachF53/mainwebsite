@@ -8,22 +8,43 @@ head
   link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.12/css/all.css' integrity='sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9' crossorigin='anonymous')
   link(rel='stylesheet' type='text/css' href='public/css/style.css')
   title F-R Web Designs|Services
-nav.navbar.sticky-top.navbar-expand-lg.navbar-dark.bg-dark
-  a.navbar-brand.font-weight-bold(href='index')
-    span.text-danger First
-    |          Response Web Designs
-  button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
-    span.navbar-toggler-icon
-  #navbarNav.collapse.navbar-collapse
-    ul.navbar-nav.justify-content-center
-      li.nav-item
-        a.nav-link(href='index') Home
-      li.nav-item
-        a.nav-link(href='port') Portfolio
-      li.nav-item
-        a.active1.text-danger.nav-link(href='service') Services
-      li.nav-item
-        a.nav-link(href='contact') Contact Me
+  nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.sticky-top
+    a.navbar-brand(href='#')
+      span.text-danger First
+      |          Response Web Desgins
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse.bg-dark
+      ul.navbar-nav.mr-auto
+        li.nav-item
+          a6.nav-link(href='index')
+            i.fa.fa-home(aria-hidden='true')
+            |  Home
+        li.nav-item
+          a.nav-link(href='port')
+            i.fa.fa-book(aria-hidden='true')
+            |  Portfolio
+        li.nav-item.dropdown
+          a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+            i.fa.fa-search(aria-hidden='true')
+            |   Previews
+          .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+            a.dropdown-item(href='landing' target='_blank') Landing Pages
+            a.dropdown-item(href='blog' target='_blank') Blog Posts
+            a.dropdown-item(href='paralax' target='_blank') Paralax Websites
+        li.nav-item
+          a.nav-link.active1.text-danger(href='service')
+            i.fa.fa-wrench(aria-hidden='true')
+            |  Services
+        li.nav-item
+          a.nav-link(href='contact')
+            i.fa.fa-address-book(aria-hidden='true')
+            |  Contact Me
+      ul.nav.navbar-nav.navbar-right
+        li.nav-item
+          a.nav-link(href='login.html')
+            i.fa.fa-users(aria-hidden='true')
+            |  Login
 .container-fluid.padding
   .row.welcome1.text-center
     .col-12
@@ -37,8 +58,8 @@ nav.navbar.sticky-top.navbar-expand-lg.navbar-dark.bg-dark
         span.text-secondary (server side)
         |  end parts of websites for low cost/payments!
 .row.container-fluid
-  .col-md-3.col-sm-2
-  .col-md-6.col-sm-8
+  .col-md-3.col-sm-2.col-xs-1
+  .col-md-6.col-sm-8.col-xs-10
     .card.text-center
       .card-header
         h3
@@ -56,10 +77,10 @@ nav.navbar.sticky-top.navbar-expand-lg.navbar-dark.bg-dark
               br
               | (Computer/Tablet/Moblie friendly)
         br
-        a.btn.btn-success(href='contact') CONTACT ME!
+        a.btn.btn-success(href='contact.html') CONTACT ME!
       .card-footer
         p.card-text $149.99 - $249.99 Onetime Fee
-  .col-md-3.col-sm-2
+  .col-md-3.col-sm-2.col-xs-1
 br
 // COPY START FOR NEW ROW
 .row.container-fluid
@@ -82,7 +103,7 @@ br
               br
               | (Computer/Tablet/Moblie friendly)
         br
-        a.btn.btn-success(href='contact') CONTACT ME!
+        a.btn.btn-success(href='contact.html') CONTACT ME!
       .card-footer
         p.card-text $249.99 - $349.99 Onetime Fee
   .col-md-3.col-sm-2.col-xs-1
@@ -101,28 +122,30 @@ br
             li Worried about how to make your website go live so people can see it?
             li Don't worry at all because we got you covered!
         br
-        a.btn.btn-success(href='contact') CONTACT ME!
+        a.btn.btn-success(href='contact.html') CONTACT ME!
       .card-footer
         p.card-text $39.99 Monthly Fee
   .col-md-3.col-sm-2.col-xs-1
 br
-.row.container-fluid
-  .col-md-3.col-sm-2.col-xs-1
-  .col-md-6.col-sm-8.col-xs-10
-    .card.text-center
-      .card-header
-        h3
-          | Domain Name/Website URL
-      .card-body
-        p.card-text
-          ul.list1
-            li Not sure where to go to get your website Domain/URL?
-            li Don't sweat it because we can get it for you!
-        br
-        a.btn.btn-success(href='contact') CONTACT ME!
-      .card-footer
-        p.card-text $4.99 Monthly Fee
-  .col-md-3.col-sm-2.col-xs-1
+
+//.row.container-fluid
+//  .col-md-3.col-sm-2.col-xs-1
+//  .col-md-6.col-sm-8.col-xs-10
+//    .card.text-center
+//      .card-header
+//        h3
+//          | Domain Name/Website URL
+//      .card-body
+//        p.card-text
+//          ul.list1
+//            li Not sure where to go to get your website Domain/URL?
+//            li Don't sweat it because we can get it for you!
+//        br
+//        a.btn.btn-success(href='contact.html') CONTACT ME!
+//      .card-footer
+//        p.card-text $4.99 Monthly Fee
+//  .col-md-3.col-sm-2.col-xs-1
+
 br
 br
 br
@@ -131,7 +154,7 @@ br
 br
 // ***************************FOOTER***********************************
 footer.footer.fixed-bottom
-  p First Response Web Designs, Copyright &copy; 2018
+  p First Response Web Designs, &copy; Copyright 2018
 // jQuery first, then Popper.js, then Bootstrap JS
 script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
 script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49' crossorigin='anonymous')
