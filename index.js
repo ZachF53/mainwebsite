@@ -52,37 +52,38 @@ app.post('/send', (req, res) => {
     <p>${req.body.message}</p>
   `;
 
+  // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-        user: 'frwebdesigns1@gmail.com',
-        pass: '56nTk46!!'
+      user: 'frwebdesigns1@gmail.com', // generated ethereal user
+      pass: 'Password@53'  // generated ethereal password
     },
-    tls:{
-      rejectUnauthorized:false
+    tls: {
+      rejectUnauthorized: false
     }
   });
 
   // setup email data with unicode symbols
   let mailOptions = {
-      from: '"Website Contact" <frwebdesigns1@gmail.com>',
-      to: 'football45353@gmail.com, frwebdesigns1@gmail.com', 
-      subject: 'Website Contact Request', 
-      text: 'Contact Request', 
-      html: output
+    from: '"Website Contact" <frwebdesigns1@gmail.com>', // sender address
+    to: 'football45353@gmail.com, frwebdesigns1@gmail.com', // list of receivers
+    subject: 'Website Contact Request', // Subject line
+    text: 'Contact Request', // plain text body
+    html: output // html body
   };
 
-
+  // send mail with defined transport object
   transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-          return console.log(error);
-      }
-      console.log('Message sent: %s', info.messageId);
-      console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+    if (error) {
+      return console.log(error);
+    }
+    console.log('Message sent: %s', info.messageId);
+    console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
-      res.render('contact');
+    res.render('contact');
   });
 });
 
