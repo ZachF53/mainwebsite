@@ -19,12 +19,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Contact Route
-app.get('/index', (req, res) => {
+app.get('/', (req, res) => {
   res.render('index');
 });
 
 // Add Route
-app.get('/', (req, res) => {
+app.get('/index', (req, res) => {
   res.render('index');
 });
 app.get('/port', (req, res) => {
@@ -58,14 +58,13 @@ app.post('/send', (req, res) => {
     <p>${req.body.message}</p>
   `;
 
-  // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-        user: 'frwebdesigns1@gmail.com', // generated ethereal user
-        pass: 'Password@53'  // generated ethereal password
+        user: 'frwebdesigns1@gmail.com',
+        pass: '56nTk46!!'
     },
     tls:{
       rejectUnauthorized:false
@@ -74,14 +73,14 @@ app.post('/send', (req, res) => {
 
   // setup email data with unicode symbols
   let mailOptions = {
-      from: '"Website Contact" <frwebdesigns1@gmail.com>', // sender address
-      to: 'football45353@gmail.com, frwebdesigns1@gmail.com', // list of receivers
-      subject: 'Website Contact Request', // Subject line
-      text: 'Contact Request', // plain text body
-      html: output // html body
+      from: '"Website Contact" <frwebdesigns1@gmail.com>',
+      to: 'football45353@gmail.com, frwebdesigns1@gmail.com', 
+      subject: 'Website Contact Request', 
+      text: 'Contact Request', 
+      html: output
   };
 
-  // send mail with defined transport object
+
   transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
           return console.log(error);

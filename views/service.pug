@@ -2,160 +2,201 @@ doctype html
 head
   // Required meta tags
   meta(charset='utf-8')
-  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
   // Bootstrap CSS
-  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' integrity='sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB' crossorigin='anonymous')
-  link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.12/css/all.css' integrity='sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9' crossorigin='anonymous')
-  link(rel='stylesheet' type='text/css' href='public/css/style.css')
-  title F-R Web Designs|Services
-  nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.sticky-top
-    a.navbar-brand(href='index')
-      span.text-danger First
-      |          Response Web Desgins
-    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
-      span.navbar-toggler-icon
-    #navbarSupportedContent.collapse.navbar-collapse.bg-dark
-      ul.navbar-nav.mr-auto
-        li.nav-item
-          a.nav-link(href='index')
-            i.fa.fa-home(aria-hidden='true')
-            |  Home
-        li.nav-item
-          a.nav-link(href='port')
-            i.fa.fa-book(aria-hidden='true')
-            |  Portfolio
-        li.nav-item.dropdown
-          a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-            i.fa.fa-search(aria-hidden='true')
-            |   Previews
-          .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
-            a.dropdown-item(href='landing' target='_blank') Landing Pages
-            a.dropdown-item(href='blog' target='_blank') Blog Posts
-            a.dropdown-item(href='paralax' target='_blank') Paralax Websites
-        li.nav-item
-          a.nav-link.active1.text-danger(href='service')
-            i.fa.fa-wrench(aria-hidden='true')
-            |  Services
-        li.nav-item
-          a.nav-link(href='contact')
-            i.fa.fa-address-book(aria-hidden='true')
-            |  Contact Me
-      ul.nav.navbar-nav.navbar-right
-        li.nav-item
-          a.nav-link.disabled(href='#')
-            i.fa.fa-users(aria-hidden='true')
-            |  Login
-.container-fluid.padding
-  .row.welcome1.text-center
-    .col-12
-      h1.display-4 Our Services!
-    hr.my-4
-    .col-12
-      h5
-        | Need an affordable website at an affordable price?! You have came to the right place! We build the front 
-        span.text-secondary (UI-User Interface)
-        |         and back 
-        span.text-secondary (server side)
-        |  end parts of websites for low cost/payments!
-.row.container-fluid
-  .col-md-3.col-sm-2.col-xs-1
-  .col-md-6.col-sm-8.col-xs-10
-    .card.text-center
-      .card-header
-        h3
-          | Tier 1: Basic 
-          span.text-muted (static)
-          |  Web Development
-      .card-body
-        p.card-text
-          ul.list1
-            li Up to 5 Pages
-            li 1 Contact Form
-            li Basic/Simple Web Desgin
-            li
-              | Responsive web design 
-              br
-              | (Computer/Tablet/Moblie friendly)
-        br
-        a.btn.btn-success(href='contact') CONTACT ME!
-      .card-footer
-        p.card-text $149.99 - $249.99 Onetime Fee
-  .col-md-3.col-sm-2.col-xs-1
+  link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css', integrity='sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB', crossorigin='anonymous')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  link(rel='stylesheet', type='text/css', href='../public/css/style.css')
+  title Home
+// START Navigation
+.topnav.fixed-top
+  a.navbar-brand(href='index') First Response Web Desgin
+  .topnav-right
+    span.menu(style='font-size:30px;cursor:pointer;color:white;', onclick='openNav()') &#x2630;
+#myNav.overlay
+  a.closebtn(href='javascript:void(0)', onclick='closeNav()') &times;
+  .overlay-content
+    a(href='index') Home
+    a(href='about') Why Our Sites
+    a(href='client') Our Clients
+    a(href='service') Services
+    a(href='contact') Contact
+// END Navigation
 br
-// COPY START FOR NEW ROW
-.row.container-fluid
-  .col-md-3.col-sm-2.col-xs-1
-  .col-md-6.col-sm-8.col-xs-10
-    .card.text-center
-      .card-header
-        h3
-          | Tier 2: Advance 
-          span.text-muted (dynamic)
-          |  Web Development
-      .card-body
-        p.card-text
-          ul.list1
-            li Up to 10 Pages
-            li Up to 3 Forms
-            li Advance Web Desgin
-            li
-              | Responsive web design 
-              br
-              | (Computer/Tablet/Moblie friendly)
-        br
-        a.btn.btn-success(href='contact') CONTACT ME!
-      .card-footer
-        p.card-text $249.99 - $349.99 Onetime Fee
-  .col-md-3.col-sm-2.col-xs-1
-    
 br
-.row.container-fluid
-  .col-md-3.col-sm-2.col-xs-1
-  .col-md-6.col-sm-8.col-xs-10
-    .card.text-center
-      .card-header
-        h3
-          | Web Hosting
-      .card-body
-        p.card-text
-          ul.list1
-            li Worried about how to make your website go live so people can see it?
-            li Don't worry at all because we got you covered!
-        br
-        a.btn.btn-success(href='contact') CONTACT ME!
-      .card-footer
-        p.card-text $39.99 Monthly Fee
-  .col-md-3.col-sm-2.col-xs-1
 br
+br
+.jumbotron.jumbotron-fluid.text-center.bg-blk
+  .container
+    h1.display-4 Low Website Cost!
+    p.lead
+      | Prices up front! There is no messing around here. You pick your tier and the price is set right there! Just a one time payment AFTER the website is done, NOTHING upfront!
+br
+.container-fluid
+  .row
+    .col-xs-1.col-sm-2.col-md-2.col-lg-3
+    .col-xs-10.col-sm-8.col-md-8.col-lg-6
+      table
+        tr
+          th(style='width:50%') Features
+          th
+            i.fa.fa-star(aria-hidden='true')
+            |  Tier 1 
+            i.fa.fa-star(aria-hidden='true')
+          th Tier 2
+          // <th>Tier 3</th>
+        tr
+          td
+            | Free Domain Name 
+            span.text-muted (only for 1 year)
+          td
+            i.fa.fa-check
+          td
+            i.fa.fa-check
+          // <td><i class="fa fa-check"></i></td>
+        tr
+          td
+            | Responsive Design 
+            span.text-muted (lookes good on mobile phone and up)
+          td
+            i.fa.fa-check
+          td
+            i.fa.fa-check
+          // <td><i class="fa fa-check"></i></td>
+        tr
+          td Contact Form
+          td
+            i.fa.fa-check
+          td
+            i.fa.fa-check
+          // <td><i class="fa fa-check"></i></td>
+        tr
+          td
+            i.fa.fa-star(aria-hidden='true')
+            |  Special - Free 1 year Hosting 
+            i.fa.fa-star(aria-hidden='true')
+          td
+            i.fa.fa-check
+          td
+            i.fa.fa-remove
+          // <td><i class="fa fa-check"></i></td>
+        tr
+          td User/Owner Login
+          td
+            i.fa.fa-remove
+          td
+            i.fa.fa-check
+          // <td><i class="fa fa-check"></i></td>
+        //
+          <tr>
+          <td>Ecommerce Store</td>
+          <td><i class="fa fa-remove"></i></td>
+          <td><i class="fa fa-remove"></i></td>
+          <td><i class="fa fa-check"></i></td>
+          </tr>
+        tr
+          th.thp Prices
+          th
+            h4 $149.99
+          th
+            h6 $249.99-
+            h6 $399.99
+          //
+            <th>
+            <h6>$349.99 -</h6>
+            <h6>$499.99</h6>
+            </th>
+    .col-xs-1.col-s-2.col-m-2.col-l-3
+br
+br
+.jumbotron.jumbotron-fluid.text-center.bg-blk
+  .container
+    h1.display-4 Free Consultation!
+    p.lead
+      | There is no missing around here! You need a website that will put you out on the market and you have came to the right place!
+      | Contact us today to discuss how you can get your digital footprint and start your first website!
+br
+.container
+  .card-deck.mb-3.text-center
+    .card.mb-4.box-shadow
+      .card-header
+        h4.my-0.font-weight-normal
+          i.fa.fa-star(aria-hidden='true')
+          |  Tier 1 
+          i.fa.fa-star(aria-hidden='true')
+      .card-body
+        h1.card-title.pricing-card-title
+          | $149.99
+        ul.list-unstyled.mt-3.mb-4
+          li Up to 5 Pages
+          li 1 Contact Form
+          li Mobile first Design
+          li No Upfront Cost
+          li
+            | Free Domain
+            span.text-muted (for 1 year)
+          li
+            i.fa.fa-star(aria-hidden='true')
+            |  Special - Free 1 year Hosting
+            i.fa.fa-star(aria-hidden='true')
+        a.btn.btn-lg.btn-block.btn-primary(href='contact') Contact Us!
+    .card.mb-4.box-shadow
+      .card-header
+        h4.my-0.font-weight-normal Tier 2
+      .card-body
+        h1.card-title.pricing-card-title
+          | $249.99-$399.99
+        ul.list-unstyled.mt-3.mb-4
+          li Up to 20 Pages
+          li User/Owner Login
+          li Mobile first Design
+          li No Upfront Cost
+          li
+            | Free Domain
+            span.text-muted (for 1 year)
+          li  
+          br
+        a.btn.btn-lg.btn-block.btn-primary(href='contact') Contact Us!
+    //
+      <div class="card mb-4 box-shadow">
+      <div class="card-header">
+      <h4 class="my-0 font-weight-normal">Tier 3</h4>
+      </div>
+      <div class="card-body">
+      <h1 class="card-title pricing-card-title">$349.99-$299.99
+      </h1>
+      <ul class="list-unstyled mt-3 mb-4">
+      <li>Ecommerce Store</li>
+      <li>User/Owner Login</li>
+      <li>Mobile first Design</li>
+      <li>No Upfront Cost</li>
+      <li>Free Domain
+      <span class="text-muted">(for 1 year)</span>
+      </li>
+      </ul>
+      <a class="btn btn-lg btn-block btn-primary" href="contact.html">Contact Us!</a>
+      </div>
+      </div>
+br
+br
+br
+br
+br
+.footer.fixed-bottom
+  h6
+    | First Response Web Designs | &copy; Copyright 2018 | All Rights Reserved 
+    a.social(href='https://www.facebook.com/FRWebDesigns')
+      i.fa.fa-facebook-official(aria-hidden='true')
 
-//.row.container-fluid
-//  .col-md-3.col-sm-2.col-xs-1
-//  .col-md-6.col-sm-8.col-xs-10
-//    .card.text-center
-//      .card-header
-//        h3
-//          | Domain Name/Website URL
-//      .card-body
-//        p.card-text
-//          ul.list1
-//            li Not sure where to go to get your website Domain/URL?
-//            li Don't sweat it because we can get it for you!
-//        br
-//        a.btn.btn-success(href='contact') CONTACT ME!
-//      .card-footer
-//        p.card-text $4.99 Monthly Fee
-//  .col-md-3.col-sm-2.col-xs-1
-
-br
-br
-br
-br
-br
-br
-// ***************************FOOTER***********************************
-footer.footer.fixed-bottom
-  p First Response Web Designs, &copy; Copyright 2018
+// Optional JavaScript
+script.
+  function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+  }
+  function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+  }
 // jQuery first, then Popper.js, then Bootstrap JS
-script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
-script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49' crossorigin='anonymous')
-script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js' integrity='sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T' crossorigin='anonymous')
+script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
+script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js', integrity='sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T', crossorigin='anonymous')
