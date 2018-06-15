@@ -34,20 +34,20 @@ br
   form(method='POST' action='send').text-center
     .form-row
       .col
-        label First Name
+        label(for='FirstName') First Name
         input.form-control(type='text', placeholder='First name', required='')
       .col
-        label Last Name
+        label(for='LastName') Last Name
         input.form-control(type='text', placeholder='Last name', required='')
     br
     .form-row
       .form-group.col
-        label Email
+        label(for='exampleInputEmail1') Email
         input.form-control(type='email', placeholder='Email')
         small#emailHelp.form-text.text-muted We&apos;ll never share your email with anyone else.
     br
     .form-group
-      textarea#exampleFormControlTextarea1.form-control(rows='3', required='')
+      textarea#exampleFormControlTextarea1.form-control(name='message' rows='3', required='')
       small#emailHelp.form-text.text-muted Please provide as much information so we can help you quickly!
     button.btn.btn-primary(type='submit' value='Submit') Submit
 br
