@@ -24,26 +24,20 @@ app.get('/', (req, res) => {
 });
 
 // Add Route
-app.get('/index', (req, res) => {
-  res.render('index');
+app.get('/about', function (req, res) {
+  res.render("about");
 });
-app.get('/port', (req, res) => {
-  res.render('port');
+app.get('/client', function (req, res) {
+  res.render("client");
 });
-app.get('/service', (req, res) => {
-  res.render('service');
+app.get('/contact', function (req, res) {
+  res.render("contact");
 });
-app.get('/contact', (req, res) => {
-  res.render('contact');
+app.get('/index', function (req, res) {
+  res.render("index");
 });
-app.get('/blog', (req, res) => {
-  res.render('blog');
-});
-app.get('/landing', (req, res) => {
-  res.render('landing');
-});
-app.get('/paralax', (req, res) => {
-  res.render('paralax');
+app.get('/service', function (req, res) {
+  res.render("service");
 });
 
 app.post('/send', (req, res) => {
