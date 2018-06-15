@@ -33,6 +33,9 @@ app.get('/client', function (req, res) {
 app.get('/contact', function (req, res) {
   res.render("contact");
 });
+app.get('/send', function (req, res) {
+  res.redirect("contact");
+});
 app.get('/index', function (req, res) {
   res.render("index");
 });
